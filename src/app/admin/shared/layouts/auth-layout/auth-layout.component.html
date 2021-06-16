@@ -1,0 +1,19 @@
+<mat-toolbar [color]="themeColor">
+  <div class="container" fxLayout="row"
+       fxLayoutAlign="space-between center">
+    <mat-nav-list>
+      <a class="pink-toolbar" mat-list-item routerLinkActive="active" routerLink="">LoveLifeKaif</a>
+    </mat-nav-list>
+    <mat-nav-list fxLayout="row">
+      <a class="pink-toolbar" mat-list-item routerLinkActive="active" routerLink="/admin/login">Вход</a>
+      <a class="pink-toolbar" mat-list-item routerLinkActive="active" routerLink="/admin/register">Регистрация</a>
+    </mat-nav-list>
+  </div>
+</mat-toolbar>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+
+

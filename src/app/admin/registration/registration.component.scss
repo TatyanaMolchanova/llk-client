@@ -1,0 +1,23 @@
+@import "~src/styles/variables/variables";
+
+:host {
+  ::ng-deep .mat-grid-tile .mat-figure {
+    justify-content: flex-start;
+  }
+
+  ::placeholder {
+    color: $color-gray;
+  }
+
+  ::ng-deep .mat-form-field {
+    width: 350px;
+  }
+
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: $color-blue;
+  }
+
+  .auth-form {
+    margin-top: 100px;
+  }
+}

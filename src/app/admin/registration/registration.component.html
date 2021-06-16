@@ -1,0 +1,30 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="auth-form"
+      fxLayout="column" fxLayoutAlign="center center" gdAlignColumns="center center">
+  <h1 class="mat-card-title blue fw-900">Создать аккаунт:</h1>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label class="black">E-mail:</mat-label>
+      <input matInput placeholder="Введите Ваш e-mail" formControlName="email" type="email">
+      <mat-icon matSuffix class="blue">email</mat-icon>
+      <mat-error *ngIf="form.get('email')?.errors?.required">E-mail не может быть пустым</mat-error>
+      <mat-error *ngIf="form.get('email')?.errors?.email">Введите правильный e-mail</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label class="black">Пароль:</mat-label>
+      <input matInput placeholder="Введите Ваш e-mail" formControlName="password" type="password">
+      <mat-icon matSuffix class="blue">vpn_key</mat-icon>
+      <mat-error *ngIf="form.get('password')?.errors?.required">Пароль не может быть пустым</mat-error>
+      <mat-error *ngIf="form.get('password')?.errors?.minlength && form.get('password')?.errors?.minlength.requiredLength">
+        Пароль должен быть более, чем {{form.get('password')?.errors?.minlength.requiredLength}} знаков.
+        Сейчас он {{form.get('password')?.errors?.minlength.actualLength}} знака.
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <button mat-raised-button color="primary"
+            type="submit"
+            [disabled]="form.invalid || form.disabled">Зарегистрироваться</button>
+  </div>
+</form>

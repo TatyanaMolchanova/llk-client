@@ -1,1 +1,83 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~src/styles/variables/variables";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.container {
+  width: inherit;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+// Font-weight
+
+.fw-400 {
+  font-weight: $font-weight-regular !important;
+}
+
+.fw-600 {
+  font-weight: $font-weight-semi-bold !important;
+}
+
+.fw-900 {
+  font-weight: $font-weight-heavy !important;
+}
+
+// Colors
+.blue {
+  color: $color-blue !important;
+}
+
+.pink {
+  color: $color-pink !important;
+}
+
+.black {
+  color: $color-black !important;
+}
+
+.gray {
+  color: $color-gray !important;
+}
+
+
+
+@media (max-width: 1920px) {
+  .container {
+    //max-width: 1320px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
